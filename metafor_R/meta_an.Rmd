@@ -1,0 +1,347 @@
+---
+title: "A primer for conducting a meta-analysis to synthesize correlational data"
+author: "Enrico Perinelli"
+date: "_Department of Psychology and Cognitive Science, University of Trento_"
+output: 
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Preliminary Information
+
+In this exercise, we will use the meta-analysis provided by Molloy, O’Carroll, & Ferguson (2014) and the tutorial by Quintana (2015). In particular, the meta-analysis by Molloy et al. (2014) aimed to systematically estimate the strength and variability of the relation between __conscientiousness__ (from the five-factor model of personality) and __adherence to medications__ and to identify moderators of this relationship.
+
+Here, the aim is to cover the main meta-analytic steps and calculations, by using the tutorial codes provided by Quintana (2015) with some integrations.
+The package used is `metafor`.
+
+Some useful links:
+
+* The paper by Quintana (2015) - <https://www.frontiersin.org/articles/10.3389/fpsyg.2015.01549/full>  
+* The paper by Molloy, O’Carroll, & Ferguson (2014) - <https://academic.oup.com/abm/article/47/1/92/4563919>
+* YouTube tutorial - <https://www.youtube.com/watch?v=d1pYHfCKhyA&t=558s>
+* The script and datasets (GitHub) - <https://github.com/dsquintana/corr_meta>
+* The `metafor` package website - <https://www.metafor-project.org/doku.php/plots>
+
+In what follows, I have reported the scripts provided by Quintana (2015), with some adaptations.
+
+## Install and load packages
+
+The code `install.packages(c("robumeta", "metafor", "dplyr"))` needs to be run just once
+
+```{r, results='hide', message=FALSE}
+# install.packages(c("robumeta", "metafor", "dplyr"))
+
+library("robumeta")
+library("metafor")
+library("dplyr")
+```
+
+## Import your data
+
+For the analyses described in Quintana 2015, the data is included with the metafor package.
+Use the following command to load the data.
+You are creating a new object called "dat" from the Molloy et al., (2014) data.
+
+```{r}
+dat <- get(data(dat.molloy2014)) 
+dat <- mutate(dat, study_id = 1:16) # This adds a study id column 
+dat <- dat %>% select(study_id, authors:quality) # This brings the study id column to the front
+```
+
+### Take a look at the data
+
+You should run `View(dat)` by removing the *#*
+
+```{r}
+# View(dat) 
+
+knitr::kable(dat, caption = "Our dataset")
+dim(dat)
+glimpse(dat)
+
+```
+
+We can see that we have 16 rows (reports) and 11 columns (variables)
+
+The data frame contains the following 11 columns:
+
+|Var   | Type | Explanation|
+|:------|:-----|:--------|
+|study_id |numeric | id for each study|
+|authors   |character|study authors|
+|year      |numeric   |  publication year|
+|ni        |numeric   |  sample size of the study|
+|ri        |numeric   |  observed correlation|
+|controls  |character |  number of variables controlled for|
+|design    |character |  whether a cross-sectional or prospective design was used|
+|a_measure |character |  type of adherence measure (self-report or other)|
+|c_measure |character |  type of conscientiousness measure (NEO or other)|
+|meanage   |numeric   |  mean age of the sample|
+|quality   |numeric   |  methodological quality|
+
+
+## *r*-to-*z* transformation
+
+The first step is to transform *r* to *Z* and calculate the corresponding sample variances, by means of the `escalc()` function.  
+
+"The reason that *r* is often transformed to _Z_*<sub>r</sub>* in meta-analyses is because the distribution of sample *r*’s around a given population ρ is skewed (except in sample sizes larger than those commonly seen in the social sciences), whereas a sample of _Z_*<sub>r</sub>s* around a population _Z_*<sub>r</sub>* is symmetric (for further details see Hedges & Olkin, 1985, pp. 226–228; Schulze, 2004, pp. 21–28). This symmetry is desirable when combining and comparing effect sizes across studies. However, _Z_*<sub>r</sub>* is less readily interpretable than *r* both because it is not bounded (i.e., it can have values greater than ±1.0) and simply because it is unfamiliar to many readers. Typical practice is to compute *r* for each study, convert these to _Z_*<sub>r</sub>* for meta-analytic combination and comparison, and then convert results of the meta-analysis (e.g., mean effect size) back to *r* for reporting." (Card, 2012, p. 89).
+
+
+Run `?escalc` to see more information about the `escalc()` function.
+
+
+```{r}
+dat <- escalc(measure="ZCOR", ri=ri, ni=ni, data=dat, slab=paste(authors, year, sep=", ")) 
+```
+
+This performs the *r* to *z* transform from the "dat" dataset and calculates the corresponding sample variances.
+
+**ri** represents the correlation coefficients  
+**ni** represent the sample sizes.
+
+Lets have a look at the file again, notice the two new variables at the end.
+The **yi** variable is the *z*-score transformation and the **vi** variable is the corresponding estimated sampling variance.
+
+```{r}
+# View(dat)
+
+knitr::kable(dat, caption = "Our dataset")
+
+```
+
+## Perform the meta-analysis using a random-effects model
+
+The following commands will print out the data and also calculates and print the confidence interval for the amount of heterogeneity (I^2).
+
+We will use three functions: `rma()`, `predict()`, and `confint()`.
+
+Run:
+
+* `?rma` to see more information about the `rma()` function;
+* `?predict` to see more information about the `predict()` function;
+* `?confint` to see more information about the `confint()` function.
+
+The output provides important information to report the meta-analysis.
+We will discuss them separately (in three steps, one for each function)
+
+```{r}
+res <- rma(yi, vi, data=dat) 
+res
+```
+
+* `Random-Effects Model (k = 16; tau^2 estimator: REML)`
+  + This line tells us we've used a random-effects model, with 16 studies (i.e., "k") and that the degree of heterogeneity (tau^2) was calculated using a restricted maximum-likelihood estimator.
+
+* `tau^2 (estimated amount of total heterogeneity): 0.0081 (SE = 0.0055)`
+  + This line indicates that tau-squared was 0.0081
+
+* `I^2 (total heterogeneity / total variability):   61.73%`  
+  + This line indicates that I^2 was 61.73%.  
+  In other words 62.73% of variation reflected actual differences in the population mean.  
+  The confidence interval test revealed the 95% confidence interval for this value is 25.27, 88.24.
+
+* `Test for Heterogeneity:`    
+  `Q(df = 15) = 38.1595, p-val = 0.0009`  
+  + These next two lines show the Q-statistic with degrees of freedom as well as the p-value of the test.  
+  In this analysis, the *p*-value = 0.0009 suggests that the included studies do not share a common effect size.
+
+* `Model Results:`  
+  `estimate   se      zval     pval    ci.lb    ci.ub`  
+  `0.1499   0.0316   4.7501   <.0001   0.0881   0.2118`  
+  + Finally, we have the model results:  
+   - The "estimate" provides the estimated model coefficient (i.e., the summary effect size) with standard error("se");  
+   - The *z*-value is the corresponding test statistic;  
+   - "pval" is the corresponding *p*-value;  
+   - "ci.lb" the the lower bound of the confidence interval and "ci.ub" the upper bound of the confidence interval.  
+
+```{r}
+predict(res, digits=3, transf=transf.ztor)
+```
+
+These two lines display the transformion of Fisher's *z* back to Pearson's *r* ("pred"), and the 95% confidence interval for r ("ci.lb" and "ci.ub") for reporting the meta-analysis.
+
+
+```{r}
+confint(res)
+```
+
+These four lines display estimates and 95% confidence intervals for heterogeneity measures as described above.
+
+## Bajaut plot
+
+While the Q-statistic and I^2 can provide evidence for heterogeneity, they do not provide information on which studies may be influencing to overall heterogeneity.  
+If there is evidence of overall heterogeneity, construction of a __Bajaut plot__ can illustrate studies that are contribute to overall heterogeneity and the overall result.  
+Study IDs are used to identify studies
+
+```{r}
+b_res <- rma(yi, vi, data=dat, slab=study_id)  # New meta-analysis with study ID identifier 
+```
+
+The next command will plot a Baujat plot.
+
+```{r}
+baujat(b_res)
+```
+
+Studies that fall to the top right quadrant of the Baujat plot contribute most to both these factors. Looking at the Molloy et al., 2014 data set reveals that 3 studies that contribute to both of these factors. A closer look the characteristics of these studies may reveal moderating variables that may contribute to heterogeneity.  
+
+A set of diagnostics are also available to identify potential outliers and influential cases.
+
+```{r}
+inf <- influence(res)
+print(inf)
+plot(inf)
+```
+
+The plot visualizes the printed dataset. As there are no studies are marked with an asterisk in the printed dataset, none of the studies fulfilled the criteria as an influential study.
+
+## Forest Plot
+
+Now we visualize the meta-analysis with a forest plot. 
+
+```{r}
+forest(res, xlim=c(-1.6,1.6), atransf=transf.ztor,
+       at=transf.rtoz(c(-.4,-.2,0,.2,.4,.6)), digits=c(2,1), cex=.8)
+text(-1.6, 18, "Author(s), Year", pos=4, cex=.8)
+text( 1.6, 18, "Correlation [95% CI]", pos=2, cex=.8)
+```
+
+We've created a plot with all 16 studies. Importantly, the correlations and 95% CIs are reported for each study as well as the summary effect size (the polygon at the bottom).  
+The edges of the polygon represent the 95% confidence limit. Note the different sizes of each square - the studies with larger squares contributed more to the summary effect size.  
+
+## Publication Bias
+
+In this section we will see:
+
+* Funnel Plot
+* Tests for bias: Egger's regression test and Rank correlation test
+* Fail-Safe _N_ Analysis (or File Drawer Analysis)
+* Trimm and Fill procedure  
+
+### Funnel Plot
+
+We visualize the __Funnel Plot__ through the following code.
+
+```{r}
+funnel(res, xlab = "Correlation coefficient")
+```
+
+### Tests for bias (Egger's regression test and Rank correlation test)
+
+Then, we run two tests for bias: the __Egger's regression test__ and the __Rank correlation test__
+
+```{r}
+regtest(res)
+ranktest(res)
+```
+
+Neither Egger's regression test (*p* = 0.3071) or the Rank correlation test (*p* = 0.3918) was statistically significant so there's no evidence of publication bias according to these tests.
+
+### Fail-Safe _N_ Analysis
+
+In what follows, we see the code for the __Fail-Safe _N_ Analysis__
+
+```{r}
+fsn(yi, vi, data = dat, type="Rosenthal", alpha=.05)
+```
+
+As it can be seen from result, we need 316 studies to reach the target *p*-value (we set the threshold to .05).
+Recall that a fail-safe number lower than 5*k* + 10 is considered to attest problem of publication bias (Card , 2012, p. 270; Rosenthal, 1979).
+Given that the threshold with 16 studies (5*16+10= __90__) is lower than the Fail-Safe _N_ we observed (__316__), then this is another proof of the lack of the risk of publication bias. However, this index has been widely criticized (see Card, 2012, p. 270, par. 1.2.4.b; Crocetti, 2016, p. 12; Field & Gillett, 2010, p. 686), so the suggestion is not to rely too much on it. 
+
+### Trimm and Fill procedure
+
+To demonstrate the **trim and fill** procedure now import a data set removing 3 studies ("dat_bias") with small effect sizes and high standard error. This command will only work if the "dat_bias" file is located in your working directory. If you don't know what your working directory is have a look at the R documentation https://cran.r-project.org/manuals.html (or search online).
+
+```{r}
+# Load and View the biased dataset
+dat_bias <- read.csv("dat_bias.csv")
+# View(dat_bias)
+knitr::kable(dat_bias, caption = "Our biased dataset")
+
+# Run a meta-analysis with random effect on the new dataset
+res.b <- rma(yi, vi, data=dat_bias) 
+res.b 
+confint(res.b)
+```
+
+The next commands will print a funnel plot, perform Egger's regression test and the rank correlation test for the biased dataset.
+
+```{r}
+funnel(res.b, xlab = "Correlation coefficient") 
+regtest(res.b) 
+ranktest(res.b) 
+```
+
+The trim and fill method imputes “missing” studies to create a more symmetrical funnel plot.
+
+```{r}
+res.tf <- trimfill(res.b)
+res.tf
+funnel(res.tf, xlab = "Correlation coefficient")
+```
+
+We observe that the original effect size was **0.1850** [95%CI: 0.1160,  0.2539]. After we ran the trimm and fill analysis, the effect size was **0.1301** [95%CI: 0.0597,  0.2006]. Usually, if trivial differences between the observed and the estimated effect sizes were observed, then publication bias (albeit present) should not be a serious threat to our results (Duval, 2005). In this example, the two effect sizes are close and both significant, hence (with caution) we can conclude that publication bias does not affect our results.
+
+## Moderator Analyses
+
+Moderating effect of **age**.
+
+```{r}
+res.modage <- rma(yi, vi, mods = ~ meanage, data=dat) 
+res.modage
+```
+
+The data under the "Test of Moderators" line provides the information needed. As the p value was greater than 0.05, this provides evidence that age did not significantly moderate the observed correlation.
+
+Moderator for **methodological quality** 
+
+```{r}
+res.modq <- rma(yi, vi, mods = ~ quality, data=dat) 
+res.modq 
+```
+
+As the p value was greater than 0.05, this provides evidence that methodological quality  did not significantly moderate the observed correlation.  
+
+Now, to look at a **categorical variable**. Here we look at the moderating effect of whether variables were controlled for.
+
+```{r}
+res.mes <- rma(yi, vi, mods = ~ factor(controls), data=dat) 
+res.mes
+```
+
+As the *p* value was less than 0.05, this provides evidence that controlling for variables significantly moderates the observed correlation.  
+
+Accounting for multiple effect sizes from individual studies using robust variation estimation.  
+First we import a data set aggregating the first 3 studies from the original dataset.  
+As mentioed above, this command will only work if the "dat_mes" file is located in your working directory.
+
+
+```{r}
+dat_mes <- read.csv("dat_mes.csv") 
+#View(dat_mes)
+knitr::kable(dat_mes, caption = "Our new dataset")
+```
+
+Calculate the effect size and effect size variances
+
+```{r}
+dat_mes <- escalc(measure="ZCOR", ri=r, ni=n, data=dat_mes)
+```
+
+Fit the meta-regression model with correction for small sample size
+
+```{r}
+mes_ss <-  robu(formula = yi ~ 1, data = dat_mes, studynum = id, var.eff.size = vi, modelweights = "HIER", small = TRUE)
+print(mes_ss)
+```
+
+The output confirms that there were 16 effect sizes from 14 studies. Analysis indicates a statistically significant point estimate [0.15; 95% CI (0.08, 0.22), p = 0.001].
+
+<mark>Marked text</mark>  
+<span style="background-color: #FFFF00">Marked text</span>

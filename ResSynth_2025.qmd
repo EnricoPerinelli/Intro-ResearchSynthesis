@@ -1,0 +1,1029 @@
+---
+format:
+  beamer-pdf:
+    theme: Singapore
+    toc: true
+    number-sections: true
+    slide-level: 2
+
+metadata:
+  title: "Research Synthesis"
+  subtitle: "An Introduction to Reviews, Meta-Analyses, and PRISMA Criteria"
+  author: "Enrico Perinelli"
+  institute: |
+    Department of Psychology and Cognitive Science \newline \newline
+    University of Trento \newline \newline \newline
+    \includegraphics[height=0.12\textheight]{figs/logoDIPSCO.png} \newline
+    \hspace{0\linewidth}\rule{1\linewidth}{0.2pt}
+    Lecture for the \textit{PhD course in Psychology and Social Neuroscience} \newline
+    Department of Psychology \newline Sapienza University of Rome \newline
+    \textbf{April 29, 2025}
+
+include-in-header:
+  text: |
+    \usepackage{fontawesome5}
+    \usepackage{tikz}
+    \usepackage{multirow}
+    \usepackage{caption}
+    \usepackage{amsmath}
+    \captionsetup[figure]{labelformat=empty} % Avoid "Figure" in the Figure Caption
+    \usepackage{hyperref}
+    \hypersetup{                             % Make url blue, but it does not work
+        colorlinks=true,
+        urlcolor=blue
+      }
+---
+
+# Introduction
+
+\begin{columns}[t]
+
+\column{0.60\textwidth}
+
+\begin{center}
+
+\textit{\textbf{``If I have seen further it is by standing upon the shoulders of giants''}}
+
+\vspace{0.7cm}
+
+\textbf{\textcolor{red}{A central principle in science}}
+
+The advancement of scientific knowledge is based on systematic building of one study on top of a foundation of prior studies
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/GoogleScholar.png}
+\end{figure}
+
+
+\column{0.40\textwidth}
+
+\begin{figure}
+  \centering
+        \includegraphics[width=0.7\linewidth]{figs/Newton.png}
+\end{figure}
+
+\end{columns}
+
+---
+
+## Types of Analyses: Basic Terminology
+
+\begin{itemize}
+\item \textbf{Primary analysis} \\
+is the original analysis of data in a research study. It is what one typically imagines as the application of statistical methods.
+
+\item \textbf{Secondary analysis} \\
+is the re-analysis of data for the purpose of answering the original research question with better statistical techniques, or answering new questions with old data.
+
+\item \textbf{Research Synthesis} \\
+set of qualitative/quantitative methods to combine data or findings of previous research
+\end{itemize}
+
+\begin{flushright} \scriptsize (Card, 2012; Glass, 1976)\end{flushright}
+
+
+## Research Synthesis
+
+\LARGE
+
+\begin{itemize}
+  \item Narrative Review
+  \item Systematic Review
+  \item Meta-analysis
+\end{itemize}
+
+\begin{flushright} \scriptsize (Uman, 2011, \textit{J Can Acad Child Adolesc Psychiatry}) \end{flushright}
+
+
+## Narrative Reviews
+
+\begin{itemize}
+  \item Tend to be mainly descriptive
+  \item Do not involve a systematic search strategy; hence, they could be prone to selection bias…
+  \item … however, narrative reviews are often published by important authors, and they are easy to read. Furthermore, they provide a broader range of subtopics: Thus, it may be very useful for an initial search stage!!!
+\end{itemize}
+
+\scriptsize
+
+Suggested Journals
+\begin{itemize}
+  \item \textit{Annual Review of Psychology}
+  \item \textit{Personality and Social Psychology Review}
+  \item \textit{Psychological Review}
+  \item \textit{Annual Review of Organizational Psychology and Organizational Behavior}
+\end{itemize}
+
+---
+
+### Some examples of Narrative Reviews
+
+\begin{itemize} \footnotesize
+\item \textbf{Developmental Psychology} \\
+Cicchetti, D. (2016). Socioemotional, personality, and biological development: Illustrations from a multilevel developmental psychopathology perspective on child maltreatment. \textit{Annual Review of Psychology, 67}, 187-211. \url{https://doi.org/10.1146/annurev-psych-122414-033259}
+\item \textbf{Organizational Psychology} \\
+Fraccaroli, F., Zaniboni, S., \& Truxillo, D. M. (2024). Challenges in the new economy: A new era for work design. \textit{Annual Review of Organizational Psychology and Organizational Behavior, 11}, 307-335. \url{https://doi.org/10.1146/annurev-orgpsych-081722-053704}
+\item \textbf{Personality Psychology} \\
+Falk, C. F., \& Heine, S. J. (2015). What is implicit self-esteem, and does it vary across cultures? \textit{Personality and Social Psychology Review, 19}(2), 177-198. \url{https://doi.org/10.1177/1088868314544693}
+\item \textbf{Psychometrics} \\
+Preacher, K. J. (2015). Advances in mediation analysis: A survey and synthesis of new developments. \textit{Annual Review of Psychology, 66}, 825-852. \url{https://doi.org/10.1146/annurev-psych-010814-015258}
+\end{itemize}
+
+
+## Systematic Reviews
+
+\begin{itemize}
+  \item Tend to be mainly descriptive (as narrative reviews), or they show \textbf{simple descriptive analyses}
+  \item However, the search strategy involves \textbf{a detailed and replicable plan}
+  \item The topic is \textbf{narrower} than narrative reviews
+\end{itemize}
+
+\scriptsize
+
+Suggested Journals
+\begin{itemize}
+  \item \textit{Clinical Psychology Review}
+  \item \textit{Health Psychology Review}
+  \item \textit{Review of Educational Research}
+  \item \textit{The Leadership Quarterly}
+\end{itemize}
+
+---
+
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/Daniels2019.png}
+\end{figure}
+
+---
+
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/Daniels2019_p2.png}
+\end{figure}
+
+---
+
+### Some examples of Systematic Reviews
+
+\begin{itemize} \footnotesize
+\item \textbf{Developmental Psychology} \\
+Aldrup, K., Carstensen, B., \& Klusmann, U. (2024). The role of teachers’ emotion regulation in teaching effectiveness: A systematic review integrating four lines of research. \textit{Educational Psychologist, 59}(2), 89-110. \url{https://doi.org/10.1080/00461520.2023.2282446}
+\item \textbf{Organizational Psychology} \\
+Robertson, I. T., Cooper, C. L., Sarkar, M., \& Curran, T. (2015). Resilience training in the workplace from 2003 to 2014: A systematic review. \textit{Journal of Occupational and Organizational Psychology, 88}(3), 533-562. \url{https://doi.org/10.1111/joop.12120}
+\item \textbf{Personality Psychology/Clinical Psychology} \\
+Perinelli, E., \& Gremigni, P. (2016). Use of social desirability scales in clinical psychology: A systematic review. \textit{Journal of Clinical Psychology, 72}, 534-551. \url{https://doi.org/10.1002/jclp.22284}
+\item \textbf{Psychometrics} \\
+van de Schoot, R., Winter, S. D., Ryan, O., Zondervan-Zwijnenburg, M., \& Depaoli, S. (2017). A systematic review of Bayesian articles in psychology: The last 25 years. \textit{Psychological Methods, 22}(2), 217-239. \url{https://doi.org/10.1037/met0000100}
+\end{itemize}
+
+
+## Meta-Analyses
+
+\Large
+
+Group of statistical methods used for
+
+\begin{itemize}
+  \item summarize the results of primary studies;
+  \item analyze the degree of heterogeneity of these studies;
+  \item explain the differences found between studies.
+\end{itemize}
+
+---
+
+\small
+
+\begin{itemize}
+  \item Analyses are \textbf{more advanced} than those used for systematic reviews (Correlation Coefficient, Cohen’s d, GLM, multitrait-multimethod matrices, SEM)
+  \item Here too, search strategy involves \textbf{a detailed and replicable plan}. Hence, the starting point of a meta-analysis is a systematic review
+  \item The topic is narrower than systematic reviews: Usually the focus is obtaining an \textbf{effect size} (``the amount of something that might be of interest''; Cumming, 2012, p. 34), called \textbf{meta-analytic effect size}
+\end{itemize}
+
+\begin{center} \textcolor{green}{\underline{ESCI chapters 5-6 Jul 4 2011.xlsm} [sheet: CIs and replication]} \end{center}
+
+\scriptsize
+
+Suggested Journals
+\begin{itemize}
+  \item \textit{Psychological Bulletin}
+  \item \textit{Journal of Personality and Social Psychology}
+  \item \textit{Journal of Applied Psychology}
+\end{itemize}
+
+## History of Meta-Analyses
+
+\small
+
+In 1976, \textbf{Gene V. Glass} coined the term Meta-Analysis.  
+
+In 1977, \textbf{Smith \& Glass} published a meta-analysis of the effectiveness of psychotherapy from 375 studies, showing that psychotherapy was effective and that there is little difference in effectiveness across different types of therapies.
+
+In late 1975, \textbf{Schmidt \& Hunter} wrote a meta-analysis on personnel selection, but did not immediately submit it for publication, because of an APA award participation. They won that award, but as a result, their first meta-analysis article was not published until 1977 (Schmidt \& Hunter, 1977).
+
+\tiny
+
+Suggested Literature:  
+-   Glass, G. V. (2015). Meta-analysis at middle age: A personal history. \textit{Research Synthesis Methods, 6}(3), 221-231.  
+-   Schmidt, F. L. (2015). History and development of the Schmidt–Hunter meta-analysis methods. \textit{Research Synthesis Methods, 6}(3), 232-239.
+
+---
+
+### Some examples of Meta-Analyses
+
+\begin{itemize} \footnotesize
+\item \textbf{Developmental Psychology} \\
+Gini, G., Pozzoli, T., \& Hymel, S. (2014). Moral disengagement among children and youth: A meta‐analytic review of links to aggressive behavior. \textit{Aggressive Behavior, 40}(1), 56-68. \url{https://doi.org/10.1002/ab.21502}
+\item \textbf{Organizational Psychology} \\
+Mazzetti, G., Robledo, E., Vignoli, M., Topa, G., Guglielmi, D., \& Schaufeli, W. B. (2023). Work engagement: A meta-analysis using the job demands-resources model. \textit{Psychological Reports, 126}(3), 1069-1107. \url{https://doi.org/10.1177/00332941211051988}
+\item \textbf{Personality Psychology} \\
+Bühler, J. L., Orth, U., Bleidorn, W., Weber, E., Kretzschmar, A., Scheling, L., \& Hopwood, C. J. (2024). Life events and personality change: A systematic review and meta-analysis. \textit{European Journal of Personality, 38}(3), 544-568. \url{https://doi.org/10.1177/08902070231190219}
+\item \textbf{Health Psychology} \\
+Ottaviani, C., Thayer, J. F., Verkuil, B., Lonigro, A., Medea, B., Couyoumdjian, A., \& Brosschot, J. F. (2016). Physiological concomitants of perseverative cognition: A systematic review and meta-analysis. \textit{Psychological Bulletin, 142}(3), 231-259. \url{https://psycnet.apa.org/doi/10.1037/bul0000036}
+\end{itemize}
+
+# Steps
+
+\scriptsize
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}c p{10cm}@{}}
+\toprule
+\textbf{Step} & \textbf{Aim} \\ \midrule
+1 & Articulating one or more Research Questions for your systematic review or meta-analysis \\
+2 & Define Inclusion and Exclusion criteria \\
+3 & Identifying Relevant Literature \\
+4 & Coding study characteristics in a table \\
+5 & Extracting \textit{effect sizes} (e.g., correlations, standardized mean differences) and standard errors from individual studies, and presenting them visually \\
+6 & Artifact correction \\
+7 & Computing the meta-analytic effect size (\textit{fixed-effects} vs. \textit{random-effects} model) \\
+8 & Assessing statistical Heterogeneity among effect sizes (e.g., $Q$ statistic and $I^2$ index) \\
+9 & Explaining Heterogeneity among effect sizes (\textit{Moderator Analyses} and \textit{Meta-Regression}) \\
+10 & Assessing the Risk of Publication Bias (\textit{moderation analysis} between published vs. unpublished studies; \textit{Funnel Plot}; Egger’s linear regression method; Begg and Mazumdar’s rank correlation method; Failsafe Number; \textit{Trim and Fill method}) \\
+11 & Publishing the Systematic Review or Meta-analysis following PRISMA guidelines \\
+\bottomrule
+\end{tabular}
+\caption{Steps and Aims in a Systematic Review or Meta-analysis}
+\end{table}
+
+---
+
+
+1) Articulating one or more \textbf{research questions} for your systematic review or meta-analysis  
+
+2) Define \textbf{Inclusion and Exclusion Criteria}, by taking into account:
+-  definition of constructs of interest
+-  sample characteristics
+-  study design
+-  time frame\footnote{Options (Crocetti, 2016, p. 6):
+\begin{itemize}
+    \item Do not specify any criteria related to the year of publication.
+    \item Select literature published starting from a certain year because:
+    \begin{itemize}
+        \item there is a clear starting point (e.g., year of a seminal contribution);
+        \item the aim is to update a previous review.
+    \end{itemize}
+\end{itemize}}
+-  publication type
+-  effect sizes information
+
+---
+
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/Gini_inclusCrit.png}
+\end{figure}
+
+\begin{flushright} \scriptsize (Gini et al., 2014) \end{flushright}
+
+---
+
+\begin{itemize}
+  \item \textbf{Contructs:} Moral Disengagement and aggression
+  \item \textbf{Characteritics of the Sample}: Adolescents
+  \item \textbf{Research design}: Cross-sectional
+  \item \textbf{Time frame}: No restriction (but review conducted on March 2012)
+  \item \textbf{Type of publications}: Published and not published articles
+  \item \textbf{Information on Effect Size}: Correlations (Pearson \textit{r}) between moral disengagement and aggressive behaviors
+\end{itemize}
+
+---
+
+3) Identifying \textbf{Relevant Literature}  
+
+\only<1>{
+\small
+\vspace{0.8cm}
+\begin{center} \footnotesize Strategy Example in Electronic Database (from Perinelli \& Gremigni, 2016) \end{center}
+\vspace{0.4cm}
+
+\footnotesize
+
+\begin{tabular}{@{}ll@{}}
+\textit{social desirability} & \quad \textcolor{red}{name of the construct} \\
+\textit{socially desirable responding} & \quad \textcolor{red}{alternative name of the construct} \\
+\textit{impression management} & \quad \textcolor{red}{subdimension (facet)} \\
+\textit{self deception} & \quad \textcolor{red}{subdimension (facet)} \\
+\textit{balanced inventory of desirable responding} & \quad \textcolor{red}{scale}\textsuperscript{***} \\
+\textit{marlowe crowne} & \quad \textcolor{red}{scale}\textsuperscript{***} \\
+\textit{faking} & \quad \textcolor{red}{related construct} \\
+\end{tabular}
+
+\vspace{0.5em}
+\noindent\textsuperscript{***}\scriptsize If you do not know the exact name of the scales, write the name of the construct and ``measure''.
+}
+
+
+\only<2>{
+\small
+\vspace{0.8cm}
+\begin{center} \footnotesize Take advantage from “advanced search” \end{center}
+\vspace{0.4cm}
+
+\footnotesize
+
+Boolean Algebra: $\land$ = AND; $\lor$ = OR; $\lnot$ = NOT
+Find in:
+\begin{tabular}{@{}lllc@{}}
+  \toprule
+  \textbf{Field} & \textbf{PsycINFO} & \textbf{Scopus} \\
+  \midrule
+  Abstract       & AB                & ABS              \\
+  Title          & TI                & TITLE            \\
+  Author         & AU                & AUTH             \\
+  \bottomrule
+\end{tabular}
+
+Example of Search Query in PsycINFO (Alessandri, Zuffianò, \& Perinelli, 2017):
+\begin{itemize}
+    \item \textit{AB intervention AND AB pretest AND AB posttest AND AB follow-up} \\
+    $\rightarrow$ \textbf{260 documents}
+    \vspace{0.3cm}
+    \item \textit{AB intervention AND AB pretest AND AB posttest NOT AB follow-up} \\
+    $\rightarrow$ \textbf{1544 documents}
+\end{itemize}
+}
+
+\only<3>{
+\small
+\vspace{0.8cm}
+\begin{center} \footnotesize Unpublished Works (Grey Literature) \end{center}
+\vspace{0.4cm}
+
+\footnotesize
+
+\begin{itemize}
+  \item Conference Programs
+  \item Funding Agency Lists
+  \item Research Registries
+\end{itemize}
+
+\tiny
+
+Rothstein, H. R., \& Hopewell, S. (2009). The Grey literature. In H. Cooper, L. V. Hedges, \&. J. Valentine (Eds.), \textit{The handbook of research synthesis} (2nd ed., pp. 103-126). New York, NY: Russell Sage Foundation.
+
+Adams, R. J., Smart, P., \& Huff, A. S. (2017). Shades of grey: Guidelines for working with the grey literature in systematic reviews for management and organizational studies. \textit{International Journal of Management Reviews, 19}(4), 432-454.
+}
+
+\only<4>{
+\small
+\vspace{0.8cm}
+\begin{center} \footnotesize Backward and Forward Searches \end{center}
+\vspace{0.4cm}
+
+\footnotesize
+
+\textbf{Backward Searches}  
+After accumulating a set of studies for potential inclusion in your meta-analysis, you should read these articles completely searching for \emph{cited studies} (i.e., in \emph{References}) that might be relevant for your review that you did not identify through your other strategies.  
+
+\textbf{Forward Searches}  
+To find \emph{studies that cite} the studies you have (\emph{“cited by”} option in Google Scholar).
+}
+
+\only<5>{
+\small
+\vspace{0.8cm}
+\begin{center} \footnotesize Communication with Researchers in the Field \end{center}
+\vspace{0.4cm}
+
+\footnotesize
+
+\textbf{Ask some experts (or listserv/forum)}
+\begin{itemize}
+  \item to examine your inclusion/exclusion criteria
+  \item to examine the list of studies you have identified
+  \item if there are additional studies that should have been included
+\end{itemize}
+}
+
+
+
+\only<6>{
+\begin{center} \footnotesize Example from Gini et al (2014) \end{center}
+
+\begin{columns}[t]
+\column{0.60\textwidth}
+\begin{figure}
+  \centering
+        \includegraphics[width=0.85\linewidth]{figs/Gini_FindRelevLiter.png}
+\end{figure}
+
+\column{0.40\textwidth}
+\footnotesize
+\begin{itemize}
+  \item \textbf{Databases used}: PsychInfo, ERIC, Scopus, Google Scholar
+  \item \textbf{String:} “moral disengagement”, “aggressive behavior”, “aggression”, “bullying”, “school violence”, “antisocial behavior”
+  \item \textbf{Backward search:} Yes
+\end{itemize}
+\end{columns}
+}
+
+
+\only<7>{
+\small
+\vspace{0.8cm}
+\begin{center} \footnotesize Raters’ agreement \end{center}
+\vspace{0.4cm}
+
+\footnotesize
+
+\textbf{Compute indices like:}
+\begin{itemize}
+    \item Agreement Rate, $AR = \dfrac{\text{No. of agreements}}{\text{No. of studies}}$
+    \item Cohen’s Kappa, $k = \dfrac{p_o - p_e}{1 - p_e}$ (see \href{https://en.wikipedia.org/wiki/Cohen\%27s_kappa}{\texttt{HERE}} for more info)
+\end{itemize}
+
+\begin{columns}[t]
+\column{0.60\textwidth}
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/Landis_Koch1977.png}
+\end{figure}
+
+\column{0.40\textwidth}
+\scriptsize
+Landis, J. R., \& Koch, G. G. (1977). The measurement of observer agreement for categorical data. \textit{Biometrics, 33}(1), 159--174. \texttt{\url{https://www.jstor.org/stable/2529310}}
+\end{columns}
+}
+
+---
+
+4) Coding study characteristics
+
+\begin{itemize}
+  \item Authors and years of publication (citation)
+  \item Sample size
+  \item Country of the sample
+  \item Other characteristics (e.g., \% gender)
+  \item Effect size (e.g., Pearson’s  \textit{r} or Cohen’s \textit{d})
+  \item Notes/Other relevant information
+\end{itemize}
+
+---
+
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/Gini_coding.png}
+\end{figure}
+
+---
+
+5) Extracting effect sizes (e.g., correlations, standardized mean differences) and standard errors from individual studies, and presenting them visually (e.g., through a \textit{forest plot})
+
+\begin{figure}
+  \centering
+        \includegraphics[width=0.8\linewidth]{figs/Gini_forest.png}
+\end{figure}
+
+---
+
+\footnotesize
+
+\textbf{Large confidence intervals} (bars) indicate more \textbf{uncertainty} of the estimate, due to \textbf{small sample size}
+
+\begin{figure}
+  \centering
+        \includegraphics[width=0.9\linewidth]{figs/Gini_forest_large.png}
+\end{figure}
+
+---
+
+\footnotesize
+
+\textbf{Small confidence intervals} (bars) indicate more \textbf{precision} of the estimate, due to \textbf{large sample size}
+
+\begin{figure}
+  \centering
+        \includegraphics[width=0.9\linewidth]{figs/Gini_forest_small.png}
+\end{figure}
+
+---
+
+6) Artifact corrections (e.g., unreliability)
+
+\footnotesize
+
+\begin{itemize}
+  \item “individual primary studies [may] report effect sizes among imperfect measures of constructs, not the construct themselves” (Card, 2012, p. 127).
+  \item Especially in Work and Organizational Psychology (due to the influential work of Hunter and Schmidt), it is important to correct for artifacts, such as unreliability. This requires the \textbf{collection of reliability indices (e.g., Cronbach's alpha)} for each measure used in meta-analytic purposes.
+  \item See Schmidt \& Hunter (2015), Card (2012, Chapter 6), Morris (2023, pp. 229–239), and two webpages from the \href{https://www.metafor-project.org/doku.php/tips:hunter_schmidt_method}{\texttt{metafor}} and \href{https://cran.r-project.org/web/packages/psychmeta/vignettes/overview.html}{\texttt{psychmeta}} packages.
+\end{itemize} 
+
+---
+
+7) Computing \textbf{mean effect size} (fixed-effects model)
+
+\only<1>{
+\footnotesize
+Equations from Card (2012, Eq. 8.1-8.4)
+\begin{itemize}
+  \item Weight for study $i$, $w_i = \frac{1}{SE_i^2}$, where $SE_i$ is the standard error of the effect size estimate for study $i$.
+  \item Weighted mean effect size, $\overline{ES} = \frac{\sum (w_i ES_i)}{\sum w_i}$, where $w_i$ is the weight for study $i$; $ES_i$ is the effect size estimate from study $i$.
+  \item Standard error of the mean effect size, $SE_{\overline{ES}} = \sqrt{\frac{1}{\sum w_i}}$
+  \item Statistical significance test of the mean effect size, $z = \frac{\overline{ES}}{SE_{\overline{ES}}}$.
+\end{itemize}
+}
+
+\only<2>{
+\footnotesize
+Problems with fixed-effects
+\begin{itemize}
+  \item The fixed-effects model is \textbf{often unrealistic} in the context of meta-analysis.  
+  \item It assumes that all studies included in the analysis estimate a common true effect size, \textbf{disregarding any between-study heterogeneity} that may arise due to differences in study populations, methodologies, or contextual factors.
+  \item Therefore, it is often preferred to use the \textbf{random-effects model}, since it accounts for between-study heterogeneity by assuming that the true effect size varies across studies rather than being fixed.
+  \item This model incorporates \textbf{an additional variance component} to capture differences in study characteristics, improving the generalizability of findings and providing more realistic estimates when study populations, methodologies, or contexts are diverse.
+\end{itemize}
+}
+
+---
+
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/Card2012_FixRand.png}
+\end{figure}
+
+---
+
+7) Computing \textbf{mean effect size} (random-effects model)
+
+\small
+
+A random-effects model in meta-analysis can be estimated in four general steps:
+
+\begin{enumerate} 
+  \item Estimating the heterogeneity among effect sizes $Q$ (equation reported in Step 8),
+  \item Estimating population variability in effect sizes $\tau^2 = \frac{Q - (k - 1)}{\left( \sum w_i \right) - \left( \frac{\sum w_i^2}{\sum w_i} \right)}$
+  \item Estimating the random-effects weights of study effect sizes $w_i^* = \frac{1}{\tau^2 + SE_i^2}$
+  \item Using these random-effects weights to estimate a random-effects mean effect size $\overline{z_r} = \frac{\sum (w_i^* z_r)}{\sum w_i^*}$ and standard errors $SE_{\overline{z_r}} = \sqrt{ \frac{1}{\sum w_i^*} }$ of this estimate.
+\end{enumerate}
+
+\vspace{0.5cm}
+\begin{flushright} \scriptsize Card (2012, Ch.10, p. 234-239)\end{flushright}
+
+---
+
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/Gini_RandEff.png}
+\end{figure}
+
+---
+
+8) Assessing \textbf{Heterogeneity} among Effect Sizes  
+
+\only<1>{
+Heterogeneity is the extent to which effect sizes vary within a meta-analysis.  
+
+It is assessed by means of several indices and methods:
+\begin{itemize}
+  \item $Q$
+  \item $I^2$
+  \item $H^2$
+  \item Bajaut Plot
+\end{itemize}
+}
+
+\only<2>{
+\small
+
+$$Q = \sum \left( w_i (ES_i - \overline{ES})^2 \right) = \sum (w_i ES_i^2) - \frac{\left( \sum (w_i ES_i) \right)^2}{\sum w_i}$$
+
+\begin{itemize}
+  \item $w_i$ is the weight of study $i$.
+  \item $ES_i$ is the effect size estimate from study $i$.
+  \item $\overline{ES}$ is the mean effect size across studies.
+  \item $k$ is the number of studies. \\
+  \quad Degrees of freedom: $\chi^2_{df} = k - 1$
+\end{itemize}
+
+The \textit{null hypothesis} is that of \textbf{homogeneity}. Hence, a significant $p$ value (e.g., $< .05$) \textit{should attest heterogeneity.}
+
+\vspace{0.5cm}
+\begin{flushright} \scriptsize Equation 8.6 from Card (2012, Ch. 8) \end{flushright}
+}
+
+
+\only<3>{
+
+\footnotesize
+
+$I^2 = \frac{\tau^2}{\tau^2 + \sigma^2} = 
+\begin{cases}
+\left( \frac{Q - (k - 1)}{Q} \right) \times 100\% & \text{when } Q > (k - 1) \\
+0 & \text{when } Q \leq (k - 1)
+\end{cases}
+$
+
+\begin{itemize}
+  \item $\tau^2$ is the estimated between-study variability.
+  \item $\sigma^2$ is the within-study variability.
+  \item $Q$ is the statistic computed for significance tests of heterogeneity.
+  \item $k$ is the number of studies.
+\end{itemize}
+
+\textbf{Suggestions of Huedo-Medina et al. (2006)} regarding the amount of heterogeneity:
+\begin{itemize}
+  \item $I^2 \approx 25\%$ small
+  \item $I^2 \approx 50\%$ medium
+  \item $I^2 \approx 75\%$ large
+\end{itemize}
+
+\vspace{0.5cm}
+\begin{flushright} \scriptsize Equation 8.7 from Card (2012, Ch. 8) \end{flushright}
+}
+
+\only<4>{
+\begin{columns}[t]
+\column{0.60\textwidth}
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/H2_stat.png}
+\end{figure}
+\column{0.40\textwidth}
+\footnotesize
+“The value of H = 1 represents complete homogeneity. So theoretically it ranges from one to infinite. Further, for assessing significance of heterogeneity, if the 95\% CI of H statistic does not involve the null value (i.e., one), heterogeneity becomes significant at 5\% level of significance. There is no universal rule to grade H2 in mild, moderate or severe”  
+
+\vspace{1cm}
+\tiny
+Equations and text from Pathak, Dwivedi, Deo, Sreenivas, \& Thakur (2017, p. 16, \textit{Biostatistics and Biometrics Open Access Journal})
+\end{columns}
+}
+
+\only<5>{
+\begin{columns}[t]
+\column{0.60\textwidth}
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/BajautPlot.png}
+\end{figure}
+\column{0.40\textwidth}
+\footnotesize
+Bajaut Plot: “The \textcolor{red}{X-axis} represents the contribution of the trial to the overall Cochran Q-test for heterogeneity. \\
+The \textcolor{red}{Y-axis} represents the influence of the trial, defined as the standardized squared difference between the treatment effects estimated with and without the trial”  
+
+\vspace{1cm}
+\tiny
+Baujat, Mahé, Pignon, \& Hill (2002, p. 2641, \textit{Statistics in Medicine}). Figure from \url{https://www.metafor-project.org/doku.php/plots:baujat_plot}  
+\end{columns}
+}
+
+\only<6>{
+\begin{columns}[t]
+\column{0.20\textwidth}
+\begin{figure}
+  \centering
+        \includegraphics[width=0.55\linewidth]{figs/Gini_heterog1.png}
+\end{figure}
+\column{0.80\textwidth}
+\footnotesize
+\begin{itemize}
+  \item Is there heterogeneity in Gini et al.’s (2014) meta-analysis?
+  \item It appears so, since the effect sizes range from .13 to .59, and we can observe different estimates within this range.
+  \item However, we need to look for the appropriate information in the paper (e.g., $Q$ and $I^2$) and interpret these indicators accordingly.
+\end{itemize}
+\begin{figure}
+  \centering
+        \includegraphics[width=0.8\linewidth]{figs/Gini_heterog2.png}
+\end{figure}
+\end{columns}
+}
+
+---
+
+9) Explaining Heterogeneity among Effect Sizes: \textbf{Moderator Analyses} (e.g., meta-regression and subgroup analysis)
+
+\small
+
+If a meta-analysis reveals significant heterogeneity among effect sizes, the next step is to explain this variability using additional variables collected during the coding of the primary studies.
+
+There are two main strategies to account for heterogeneity among effect sizes:
+\begin{itemize}
+  \item \textbf{Meta-regression:} used when continuous variables are employed to explain heterogeneity (e.g., using the variable “average age” to account for variability in effect sizes).
+  \item \textbf{Analysis of categorical moderators:} used when categorical variables are employed to explain heterogeneity (e.g., using the variable “country of origin” to explain differences in effect sizes).
+\end{itemize}
+
+---
+
+9) Explaining Heterogeneity among Effect Sizes: \textbf{Meta-Regression}
+
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/Crocetti_MetaRegr.png}
+\end{figure}
+
+---
+
+9) Explaining Heterogeneity among Effect Sizes: \textbf{Analysis of categorical moderators}
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/Gini_CategModer.png}
+\end{figure}
+
+---
+
+10) Assessing the Risk of \textbf{Publication Bias}
+
+\only<1>{
+\textbf{Publication Bias} refers to the tendency for studies reporting significant or expected effects to be more likely to be published than those reporting null or unexpected results.
+\begin{center} Studies that should be included in the meta-analysis \end{center}
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/PublBias_studies.png}
+\end{figure}
+}
+
+\only<2>{
+Strategies:
+\footnotesize
+\begin{itemize}
+  \item \textbf{Moderator analysis} of published \textit{Vs} unpublished studies
+  \item \textbf{Funnel Plot} (Sterne \& Egger, 2001): see the next slide
+  \item \textbf{Egger’s linear regression method} (Egger, Davey, Smith, Schneider, \& Minder, 1997) and the \textbf{Begg and Mazumdar’s (1994) rank correlation method} are two tests of the asymmetry of a funnel plot (significant results = potential publication bias)
+  \item Failsafe numbers (\textbf{Failsafe \textit{N}}): the number of excluded studies, all averaging an effect size of zero, that would have to exist for their inclusion in the meta-analysis to lower the average effect size to a nonsignificant level. A \textbf{failsafe \textit{N} > 5\textit{k} + 10} supports findings’ robustness
+  \item \textbf{Trimm and Fill method}: imputes “missing” studies to create a more symmetrical funnel plot. If trivial differences between the observed and the new estimated effect sizes were observed, then publication bias (albeit present) should not be a serious threat to our results (Duval, 2005).
+\end{itemize}
+}
+
+\only<3>{
+\begin{center} \textbf{FUNNEL PLOT} \end{center}
+\begin{figure}
+  \centering
+        \includegraphics[width=0.8\linewidth]{figs/Field_FunnelPlot.png}
+\end{figure}
+}
+
+\only<4>{
+\begin{center} \textbf{TRIMM AND FILL PROCEDURE} \end{center}
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/TrimmFillQuintana.png}
+\end{figure}
+}
+
+---
+
+11) Publishing the systematic review or meta-analysis following PRISMA guidelines
+
+\only<1>{
+\small
+\textbf{Guidelines for high-quality reports:}
+\begin{itemize}
+  \item \textbf{QUORUM} (Quality Of Reporting Of Meta-Analysis, 1996)
+  \item \textbf{MARS} (Meta-Analysis Reporting Standards; APA, 2010, p. 251-252, \textcolor{red}{NOT in APA 2020})
+  \item \textbf{PRISMA} (Preferred Reporting Items for Systematic Reviews and Meta-Analysis; \textcolor{red}{see next slides})
+\end{itemize}
+}
+
+\only<2>{
+\begin{figure}
+  \centering
+        \includegraphics[width=0.8\linewidth]{figs/Quorum_PRISMA.png}
+\end{figure}
+}
+
+---
+
+\begin{columns}[t]
+\column{0.40\textwidth}
+\footnotesize
+
+\textbf{PRISMA}
+\begin{itemize}
+  \item Standard guidelines for conducting and reporting systematic reviews and meta-analyses.
+  \item Composed of \textbf{27 items}, organized by the standard sections of a scientific article (title, abstract, introduction, method, results, discussion, funding).
+  \item A key contribution is the \textbf{PRISMA flow diagram} (see right), which illustrates the study selection process from the initial search to the final included studies.
+\end{itemize}
+\column{0.60\textwidth}
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/PRISMA_flowDiagr.png}
+\end{figure}
+\end{columns}
+
+---
+
+\begin{columns}[t]
+\column{0.40\textwidth}
+\footnotesize
+
+\textbf{PRISMA}
+\begin{itemize}
+  \item On the right, an example of a PRISMA flow diagram from Crocetti (2016, p. 7).
+  \item Note how the number of articles decreases substantially across phases: the process starts with 2698 articles identified through the initial keyword search and ends with only 20 studies included in the final meta-analysis.
+\end{itemize}
+\column{0.60\textwidth}
+\begin{figure}
+  \centering
+    \includegraphics[width=1\linewidth]{figs/PRISMA_flowDiagr_Croc.png}
+\end{figure}
+\end{columns}
+
+---
+
+\begin{columns}[t]
+\column{0.20\textwidth}
+\footnotesize
+
+\textbf{PRISMA}
+\begin{itemize}
+  \item On the right, the list of the 27 items from Page et al. (2021)
+\end{itemize}
+\column{0.80\textwidth}
+\begin{figure}
+  \centering
+    \includegraphics[width=0.8\linewidth]{figs/PRISMA_Page2021.png}
+\end{figure}
+\end{columns}
+
+---
+
+\begin{center} \textbf{PRISMA Statement} \\ \textcolor{green}{[see the folder \textbf{PRISMA-Explanation}]}
+ \end{center} 
+
+\footnotesize
+
+\textbf{Basic explanation:}  
+
+Moher D, Liberati A, Tetzlaff J, Altman DG, The PRISMA Group (2009). Preferred Reporting Items for Systematic Reviews and Meta-Analyses: The PRISMA Statement. \textit{PLoS Med, 6}(7), Article e1000097. \url{https://doi.org/10.1371/journal.pmed.1000097}
+
+\textbf{For a deeper explanation item per item:}  
+
+Liberati A, Altman DG, Tetzlaff J, Mulrow C, Gøtzsche PC, et al. (2009) The PRISMA Statement for Reporting Systematic Reviews and Meta-Analyses of Studies That Evaluate Health Care Interventions: Explanation and Elaboration. \textit{PLoS Med, 6}(7), Article e1000100. \url{https://doi.org/10.1371/journal.pmed.1000100}
+
+\textbf{Update to PRISMA statement occurred in 2021:}  
+
+Page M J, McKenzie J E, Bossuyt P M, Boutron I, Hoffmann T C, Mulrow C D et al. (2021) The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. \textit{BMJ, 372}, Article 71. \url{https://doi.org/10.1136/bmj.n71}
+
+# Other Topics
+
+\only<1>{
+The \textbf{Individual Participant Data (IPD) Approach}: Rather than extracting summary data from study publications, original research data are sought directly from the researchers responsible for each study (Debray et al., 2015).  
+\begin{itemize}
+  \item PROS = more reliable results, given the possibility to run further analyses
+  \item CONS = very time consuming!!
+\end{itemize}
+}
+
+\only<2>{
+\textbf{Software}: Several R packages
+\begin{itemize}
+  \item \texttt{meta} \url{https://cran.r-project.org/web/packages/meta/index.html}
+  \item \texttt{metafor} \url{https://www.metafor-project.org/doku.php/features}
+  \item \texttt{metaSEM} \url{https://cran.r-project.org/web/packages/metaSEM/index.html}
+  \item \texttt{psychmeta} \url{https://cran.r-project.org/web/packages/psychmeta/index.html}
+\end{itemize}
+CMA (Comprehensive Meta-Analysis; \url{https://meta-analysis.com/}), ProMeta 3, ESCI (Exploratory Software for Confidence Intervals; \url{https://thenewstatistics.com/itns/})
+}
+
+\small
+
+\only<3>{
+\textbf{Overview of Reviews}
+\begin{itemize}
+  \item ``Synthesizes findings from existing systematic reviews to provide a higher-level synthesis of evidence.''
+\end{itemize}
+\textbf{Scoping Reviews}
+\begin{itemize}
+  \item ``Maps the breadth and scope of literature on a topic without necessarily appraising or synthesizing findings.''
+\end{itemize}
+\textbf{Evidence and Gap Map (EGM)}
+\begin{itemize}
+  \item ``Identifies where research exists and where gaps remain, providing a visual representation of research coverage rather than synthesizing findings.''
+\end{itemize}
+
+\begin{flushright} \scriptsize (Maynard, in press, Table 1) \end{flushright}
+}
+
+
+
+# References
+
+## Tutorial/Guidelines
+
+\tiny
+
+\begin{itemize}
+  \item Crocetti, E. (2016). Systematic reviews with meta-analysis: Why, when, and how? \textit{Emerging Adulthood, 4}(1), 3--18. \url{https://doi.org/10.1177/2167696815617076}
+  \item Daniels, K. (2019). Guidance on conducting and reviewing systematic reviews (and meta-analyses) in work and organizational psychology. \textit{European Journal of Work and Organizational Psychology, 28}(1), 1--10. \url{https://doi.org/10.1080/1359432X.2018.1547708}
+  \item Field, A. P., \& Gillett, R. (2010). How to do a meta‐analysis. \textit{British Journal of Mathematical and Statistical Psychology, 63}(3), 665--694. \url{https://doi.org/10.1348/000711010X502733}
+  \item Maynard, B. R. (in press). Research Synthesis Methods: A guide for conducting rigorous and relevant reviews. \textit{Research on Social Work Practice}. \url{https://doi.org/10.1177/10497315251334150}
+  \item Morris, S. B. (2023). Meta-analysis in organizational research: A guide to methodological options. \textit{Annual Review of Organizational Psychology and Organizational Behavior, 10}, 225--259. \url{https://doi.org/10.1146/annurev-orgpsych-031921-021922}
+  \item Siddaway, A. P., Wood, A. M., \& Hedges, L. V. (2019). How to do a systematic review: A best practice guide for conducting and reporting narrative reviews, meta-analyses, and meta-syntheses. \textit{Annual Review of Psychology, 70}, 747--770. \url{https://doi.org/10.1146/annurev-psych-010418-102803}
+\end{itemize} 
+
+
+## Books/Chapters
+
+\scriptsize
+
+\begin{itemize}
+  \item Card, N. (2012). \textit{Applied meta-analysis for social science research}. Guilford.
+  \item Cheung, M. W. L. (2015). \textit{Meta-analysis: A structural equation modeling approach}. Wiley.
+  \item Cooper, H. M. (2017). \textit{Research synthesis and meta-analysis: A step-by-step approach} (5th ed.). Sage.
+  \item Crocetti, E. (2015). \textit{Rassegne sistematiche, sintesi della ricerca e meta-analisi} [Systematic reviews, research syntheses, and meta-analysis]. North Charleston, SC: CreateSpace.
+  \item Cumming, G. (2012). \textit{Understanding the new statistics: Effect sizes, confidence intervals, and meta-analysis}. Routledge.
+  \item Landers, R. N., \& Behrend, T. S. (2024). Understanding and executing meta-analyses. In R. N. Landers \& T. S. Behrend (Eds.), \textit{Research methods for Industrial and Organizational psychology: Science and practice} (pp. 326--357). Routledge.
+  \item Schmidt, F. L., \& Hunter, J. E. (2015). \textit{Methods of meta-analysis: Correcting error and bias in research findings} (3rd ed.). SAGE Publications.
+  \item Schwarzer, G., Carpenter, J. R., \& Rücker, G. (2015). \textit{Meta-analysis with R}. Springer.
+\end{itemize}
+
+## Specific Topics
+
+\tiny
+
+\textbf{IPD}
+\begin{itemize}
+  \item Debray, T., Moons, K. G., Valkenhoef, G., Efthimiou, O., Hummel, N., Groenwold, R. H., \& Reitsma, J. B. (2015). Get real in individual participant data (IPD) meta‐analysis: A review of the methodology. \textit{Research Synthesis Methods, 6}(4), 293--309. \url{https://doi.org/10.1002/jrsm.1160}
+\end{itemize}
+
+\textbf{Heterogeneity}
+\begin{itemize}
+  \item Huedo-Medina, T. B., Sánchez-Meca, J., Marín-Martínez, F., \& Botella, J. (2006). Assessing heterogeneity in meta-analysis: \textit{Q} statistic or \textit{I}\textsuperscript{2} index? \textit{Psychological Methods, 11}(2), 193--206. \url{https://psycnet.apa.org/doi/10.1037/1082-989X.11.2.193}
+  \item Pathak, M., Dwivedi, S. N., Deo, S. V. S., Sreenivas, V., \& Thakur, B. (2017). Which is the preferred measure of heterogeneity in meta-analysis and why? A revisit. \textit{Biostat Biometrics Open Acc J, 1}, 1--7.
+\end{itemize}
+
+\textbf{Funnel Plot}
+\begin{itemize}
+  \item Sterne, J. A., \& Egger, M. (2001). Funnel plots for detecting bias in meta-analysis: Guidelines on choice of axis. \textit{Journal of Clinical Epidemiology, 54}(10), 1046--1055. \url{https://doi.org/10.1016/S0895-4356(01)00377-8}
+\end{itemize}
+
+\textbf{Simulations}
+\begin{itemize}
+  \item Gambarota, F., \& Altoè, G. (2024). Understanding meta-analysis through data simulation with applications to power analysis. \textit{Advances in Methods and Practices in Psychological Science, 7}(1), 1--18. \url{https://doi.org/10.1177/25152459231209330}
+\end{itemize}
+
+## Journal
+
+\begin{figure}
+  \centering
+        \includegraphics[width=1\linewidth]{figs/ResSynthMeh_Journal.png}
+\end{figure}
+
+\begin{center}
+\footnotesize \texttt{\url{https://www.cambridge.org/core/journals/research-synthesis-methods}}
+\end{center}
+
+---
+
+\huge
+\begin{center}
+		Thanks for your attention
+\end{center}
+
+\normalsize
+
+\begin{center}
+	\href{mailto:enrico.perinelli@unitn.it}{\nolinkurl{enrico.perinelli@unitn.it}} \\
+\end{center}
+
+\vspace{10pt}
+		
+\begin{figure}
+  \centering
+        \includegraphics[width=0.4\linewidth]{figs/logoDIPSCO.png}
+\end{figure}
+
+\vspace{10pt}
+
+\begin{center}
+\small
+Presentation and material available at  
+\texttt{\url{https://github.com/EnricoPerinelli/Intro-ResearchSynthesis}}
+\end{center}
+
+<!-- \begin{figure} -->
+<!--   \centering -->
+<!--         \includegraphics[width=1\linewidth]{figs/MY_FIGURE.png} -->
+<!-- \end{figure} -->
+
+<!-- \begin{columns}[t] -->
+<!-- \column{0.60\textwidth} -->
+<!-- \column{0.40\textwidth} -->
+<!-- \end{columns} -->
+
+<!-- \only<n>{ -->
+<!-- } -->
