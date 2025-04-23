@@ -8,28 +8,28 @@ Email: enrico.perinelli@unitn.it
 
 ## Overview
 
-This repository includes materials for the PhD seminar *Research Synthesis: An Introduction to Reviews, Meta-Analyses, and PRISMA Criteria*.  
-This seminar is intended for PhD students in Psychology and related fields.
+This repository includes materials for the PhD lecture titled *Research Synthesis: An Introduction to Reviews, Meta-Analyses, and PRISMA Criteria*.  
+This lecture is intended for PhD students in Psychology and related fields.
 
 ---
 
 ## Repository Structure
 
-- `figs/` Figures used in the presentation slides (e.g., PRISMA flowchart, diagrams)  
+- `ResSynth_2025-pdf.pdf`: Compiled PDF version of the slides, generated from the `.qmd` file
+- `ResSynth_2025.qmd`: Quarto source file for the slides, includes YAML and Beamer settings
+- `figs/` Figures used in the presentation slides  
 - `metafor_R/`
-	- `dat_bias.csv`, `dat_mes.csv`: Example datasets
+    - `dat_bias.csv`, `dat_mes.csv`: Example datasets
     - `meta_an.Rmd`, `meta_an.html`: R Markdown script and compiled HTML output for conducting a meta-analysis with `metafor`
     - `Molloy_et_al_2014.pdf`, `Quintana_2015.pdf`: Articles related to the content of `meta_an.html`
     - `R_syntax.R`: Raw R code related to `meta_an.html`
 - `PRISMA-Explanation/`: PRISMA articles (see info in slides)
-- `ResSynth_2025.qmd`: Quarto source file for the slides, includes YAML and Beamer settings
-- `ResSynth_2025-pdf.pdf`: Compiled PDF version of the seminar slides, generated from the `.qmd` file
 
 ---
 
 ## Feedback and Contributions
 
-If you find errors in the slides, R scripts, or references, feel free to contact me directly at [enrico.perinelli@unitn.it](mailto:enrico.perinelli@unitn.it).
+If you find errors in the slides, R scripts, references, license, etc., please contact me directly at [enrico.perinelli@unitn.it](mailto:enrico.perinelli@unitn.it).
 Feedback is very welcome!
 
 ---
@@ -46,7 +46,7 @@ Read more: [https://creativecommons.org/licenses/by-nc-sa/4.0/](https://creative
 
 This seminar (or part of it) has been delivered in the following academic contexts:
 
-**Sapienza University of Rome, Department of Psychology**
+**Sapienza University of Rome, Department of Psychology (PhD programme in Psychology and Social Neuroscience)**
 
 - 2025 – April 29 (3h)
 - 2024 – March 25 (3h)
@@ -58,7 +58,7 @@ This seminar (or part of it) has been delivered in the following academic contex
 - 2017 – March 2 (3h)
 - 2016 – March 3 (2h)
 
-**University of Naples Federico II, Department of Humanistic Studies**
+**University of Naples Federico II, Department of Humanistic Studies (PhD programme in Mind, Gender and Language)**
 
 - 2021 – May 14, 21 (6h)
 - 2018 – June 19 (3h)

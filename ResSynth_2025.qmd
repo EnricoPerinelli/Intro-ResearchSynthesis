@@ -15,7 +15,7 @@ metadata:
     University of Trento \newline \newline \newline
     \includegraphics[height=0.12\textheight]{figs/logoDIPSCO.png} \newline
     \hspace{0\linewidth}\rule{1\linewidth}{0.2pt}
-    Lecture for the \textit{PhD course in Psychology and Social Neuroscience} \newline
+    Lecture for the \textit{PhD programme in Psychology and Social Neuroscience} \newline
     Department of Psychology \newline Sapienza University of Rome \newline
     \textbf{April 29, 2025}
 
