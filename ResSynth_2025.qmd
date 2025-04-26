@@ -119,9 +119,8 @@ Suggested Journals
 
 ---
 
-### Some examples of Narrative Reviews
-
-\begin{itemize} \footnotesize
+::: {.callout-tip title="Some examples of Narrative Reviews"}
+\begin{itemize} \scriptsize
 \item \textbf{Developmental Psychology} \\
 Cicchetti, D. (2016). Socioemotional, personality, and biological development: Illustrations from a multilevel developmental psychopathology perspective on child maltreatment. \textit{Annual Review of Psychology, 67}, 187-211. \url{https://doi.org/10.1146/annurev-psych-122414-033259}
 \item \textbf{Organizational Psychology} \\
@@ -131,6 +130,7 @@ Falk, C. F., \& Heine, S. J. (2015). What is implicit self-esteem, and does it v
 \item \textbf{Psychometrics} \\
 Preacher, K. J. (2015). Advances in mediation analysis: A survey and synthesis of new developments. \textit{Annual Review of Psychology, 66}, 825-852. \url{https://doi.org/10.1146/annurev-psych-010814-015258}
 \end{itemize}
+:::
 
 
 ## Systematic Reviews
@@ -167,9 +167,8 @@ Suggested Journals
 
 ---
 
-### Some examples of Systematic Reviews
-
-\begin{itemize} \footnotesize
+::: {.callout-tip title="Some examples of Systematic Reviews"}
+\begin{itemize} \scriptsize
 \item \textbf{Developmental Psychology} \\
 Aldrup, K., Carstensen, B., \& Klusmann, U. (2024). The role of teachers’ emotion regulation in teaching effectiveness: A systematic review integrating four lines of research. \textit{Educational Psychologist, 59}(2), 89-110. \url{https://doi.org/10.1080/00461520.2023.2282446}
 \item \textbf{Organizational Psychology} \\
@@ -179,6 +178,7 @@ Perinelli, E., \& Gremigni, P. (2016). Use of social desirability scales in clin
 \item \textbf{Psychometrics} \\
 van de Schoot, R., Winter, S. D., Ryan, O., Zondervan-Zwijnenburg, M., \& Depaoli, S. (2017). A systematic review of Bayesian articles in psychology: The last 25 years. \textit{Psychological Methods, 22}(2), 217-239. \url{https://doi.org/10.1037/met0000100}
 \end{itemize}
+:::
 
 
 ## Meta-Analyses
@@ -227,14 +227,13 @@ In late 1975, \textbf{Schmidt \& Hunter} wrote a meta-analysis on personnel sele
 \tiny
 
 Suggested Literature:  
--   Glass, G. V. (2015). Meta-analysis at middle age: A personal history. \textit{Research Synthesis Methods, 6}(3), 221-231.  
--   Schmidt, F. L. (2015). History and development of the Schmidt–Hunter meta-analysis methods. \textit{Research Synthesis Methods, 6}(3), 232-239.
+-   Glass, G. V. (2015). Meta-analysis at middle age: A personal history. \textit{Research Synthesis Methods, 6}(3), 221-231. \url{https://doi.org/10.1002/jrsm.1133}  
+-   Schmidt, F. L. (2015). History and development of the Schmidt–Hunter meta-analysis methods. \textit{Research Synthesis Methods, 6}(3), 232-239. \url{https://doi.org/10.1002/jrsm.1134}
 
 ---
 
-### Some examples of Meta-Analyses
-
-\begin{itemize} \footnotesize
+::: {.callout-tip title="Some examples of Meta-Analyses"}
+\begin{itemize} \scriptsize
 \item \textbf{Developmental Psychology} \\
 Gini, G., Pozzoli, T., \& Hymel, S. (2014). Moral disengagement among children and youth: A meta‐analytic review of links to aggressive behavior. \textit{Aggressive Behavior, 40}(1), 56-68. \url{https://doi.org/10.1002/ab.21502}
 \item \textbf{Organizational Psychology} \\
@@ -244,6 +243,8 @@ Bühler, J. L., Orth, U., Bleidorn, W., Weber, E., Kretzschmar, A., Scheling, L.
 \item \textbf{Health Psychology} \\
 Ottaviani, C., Thayer, J. F., Verkuil, B., Lonigro, A., Medea, B., Couyoumdjian, A., \& Brosschot, J. F. (2016). Physiological concomitants of perseverative cognition: A systematic review and meta-analysis. \textit{Psychological Bulletin, 142}(3), 231-259. \url{https://psycnet.apa.org/doi/10.1037/bul0000036}
 \end{itemize}
+:::
+
 
 # Steps
 
@@ -466,6 +467,9 @@ To find \emph{studies that cite} the studies you have (\emph{“cited by”} opt
 
 \column{0.40\textwidth}
 \scriptsize
+
+\vspace{0.4cm}
+
 Landis, J. R., \& Koch, G. G. (1977). The measurement of observer agreement for categorical data. \textit{Biometrics, 33}(1), 159--174. \texttt{\url{https://www.jstor.org/stable/2529310}}
 \end{columns}
 }
@@ -537,7 +541,6 @@ Landis, J. R., \& Koch, G. G. (1977). The measurement of observer agreement for 
 
 7) Computing \textbf{mean effect size} (fixed-effects model)
 
-\only<1>{
 \footnotesize
 Equations from Card (2012, Eq. 8.1-8.4)
 \begin{itemize}
@@ -546,18 +549,17 @@ Equations from Card (2012, Eq. 8.1-8.4)
   \item Standard error of the mean effect size, $SE_{\overline{ES}} = \sqrt{\frac{1}{\sum w_i}}$
   \item Statistical significance test of the mean effect size, $z = \frac{\overline{ES}}{SE_{\overline{ES}}}$.
 \end{itemize}
-}
 
-\only<2>{
-\footnotesize
-Problems with fixed-effects
-\begin{itemize}
+---
+
+::: {.callout-warning title="Problems with fixed-effects model"}
+\begin{itemize} \footnotesize
   \item The fixed-effects model is \textbf{often unrealistic} in the context of meta-analysis.  
   \item It assumes that all studies included in the analysis estimate a common true effect size, \textbf{disregarding any between-study heterogeneity} that may arise due to differences in study populations, methodologies, or contextual factors.
   \item Therefore, it is often preferred to use the \textbf{random-effects model}, since it accounts for between-study heterogeneity by assuming that the true effect size varies across studies rather than being fixed.
   \item This model incorporates \textbf{an additional variance component} to capture differences in study characteristics, improving the generalizability of findings and providing more realistic estimates when study populations, methodologies, or contexts are diverse.
 \end{itemize}
-}
+:::
 
 ---
 
@@ -1015,6 +1017,7 @@ Presentation and material available at
 \texttt{\url{https://github.com/EnricoPerinelli/Intro-ResearchSynthesis}}
 \end{center}
 
+
 <!-- \begin{figure} -->
 <!--   \centering -->
 <!--         \includegraphics[width=1\linewidth]{figs/MY_FIGURE.png} -->
@@ -1027,3 +1030,6 @@ Presentation and material available at
 
 <!-- \only<n>{ -->
 <!-- } -->
+
+<!-- ::: {.callout-tip title="YOUR TITLE"} -->
+<!-- ::: -->

@@ -2,7 +2,9 @@
 
 Author: **Enrico Perinelli**  
 Affiliation: Department of Psychology and Cognitive Science, University of Trento  
-Email: enrico.perinelli@unitn.it
+Email: enrico.perinelli@unitn.it  
+License: [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![Creative Commons License](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ---
 
@@ -42,7 +44,7 @@ Read more: [https://creativecommons.org/licenses/by-nc-sa/4.0/](https://creative
 
 ---
 
-### Seminar Usage History
+## Seminar Usage History
 
 This seminar (or part of it) has been delivered in the following academic contexts:
 
