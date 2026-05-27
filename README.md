@@ -17,8 +17,8 @@ This lecture is intended for PhD students in Psychology and related fields.
 
 ## Repository Structure
 
-- `ResSynth_2025-pdf.pdf`: Compiled PDF version of the slides, generated from the `.qmd` file
-- `ResSynth_2025.qmd`: Quarto source file for the slides, includes YAML and Beamer settings
+- `ResSynth_2026-pdf.pdf`: Compiled PDF version of the slides, generated from the `.qmd` file
+- `ResSynth_2026.qmd`: Quarto source file for the slides, includes YAML and Beamer settings
 - `figs/` Figures used in the presentation slides  
 - `metafor_R/`
     - `dat_bias.csv`, `dat_mes.csv`: Example datasets
@@ -48,8 +48,9 @@ Read more: [https://creativecommons.org/licenses/by-nc-sa/4.0/](https://creative
 
 This seminar (or part of it) has been delivered in the following academic contexts:
 
-**Sapienza University of Rome, Department of Psychology (PhD programme in Psychology and Social Neuroscience)**
+**Sapienza University of Rome, Department of Psychology (PhD programme in *Psychology and Social Neuroscience*)**
 
+- 2026 – May 29 (3h)
 - 2025 – April 29 (3h)
 - 2024 – March 25 (3h)
 - 2023 – March 10 (3h)
@@ -60,7 +61,7 @@ This seminar (or part of it) has been delivered in the following academic contex
 - 2017 – March 2 (3h)
 - 2016 – March 3 (2h)
 
-**University of Naples Federico II, Department of Humanistic Studies (PhD programme in Mind, Gender and Language)**
+**University of Naples Federico II, Department of Humanistic Studies (PhD programme in *Mind, Gender and Language*)**
 
 - 2021 – May 14, 21 (6h)
 - 2018 – June 19 (3h)

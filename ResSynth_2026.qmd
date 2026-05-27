@@ -17,7 +17,7 @@ metadata:
     \hspace{0\linewidth}\rule{1\linewidth}{0.2pt}
     Lecture for the \textit{PhD programme in Psychology and Social Neuroscience} \newline
     Department of Psychology \newline Sapienza University of Rome \newline
-    \textbf{April 29, 2025}
+    \textbf{May 29, 2026}
 
 include-in-header:
   text: |
@@ -32,6 +32,13 @@ include-in-header:
         colorlinks=true,
         urlcolor=blue
       }
+    \setbeamertemplate{section page}{        % Avoid "Section 1", "Section 2", etc., and keep only the number and the title of the section
+      \centering
+      \begin{beamercolorbox}[sep=12pt,center,colsep=-4bp,rounded=true,shadow=true]{section title}
+        \usebeamerfont{section title}
+        \insertsection
+      \end{beamercolorbox}
+    }
 ---
 
 # Introduction
@@ -888,17 +895,28 @@ The \textbf{Individual Participant Data (IPD) Approach}: Rather than extracting 
   \item PROS = more reliable results, given the possibility to run further analyses
   \item CONS = very time consuming!!
 \end{itemize}
+
+Example of IPD:  
+\scriptsize  
+\hspace*{1cm}
+\fbox{\parbox{0.8\textwidth}{Brunner, M., Preckel, F., Götz, T., Lüdtke, O., \& Keller, L. (2026). High math anxiety is associated with lower math achievement across 90 countries: An individual participant data meta-analysis of representative student and adult samples. \textit{Psychological Bulletin}, \textit{152}(2), 207–253. \url{https://doi.org/10.1037/bul0000514}}}
 }
 
+\small
+
 \only<2>{
-\textbf{Software}: Several R packages
-\begin{itemize}
-  \item \texttt{meta} \url{https://cran.r-project.org/web/packages/meta/index.html}
-  \item \texttt{metafor} \url{https://www.metafor-project.org/doku.php/features}
-  \item \texttt{metaSEM} \url{https://cran.r-project.org/web/packages/metaSEM/index.html}
-  \item \texttt{psychmeta} \url{https://cran.r-project.org/web/packages/psychmeta/index.html}
-\end{itemize}
-CMA (Comprehensive Meta-Analysis; \url{https://meta-analysis.com/}), ProMeta 3, ESCI (Exploratory Software for Confidence Intervals; \url{https://thenewstatistics.com/itns/})
+\textbf{Software}
+  \begin{itemize}
+    \item Systematic Review Platform: \url{https://www.rayyan.ai/}
+    \item R packages for meta-analysis
+      \begin{itemize}
+        \item \texttt{meta} \url{https://cran.r-project.org/web/packages/meta/index.html}
+        \item \texttt{metafor} \url{https://www.metafor-project.org/doku.php/features}
+        \item \texttt{metaSEM} \url{https://cran.r-project.org/web/packages/metaSEM/index.html}
+        \item \texttt{psychmeta} \url{https://cran.r-project.org/web/packages/psychmeta/index.html}
+      \end{itemize}
+    \item Other software: CMA (Comprehensive Meta-Analysis; \url{https://meta-analysis.com/}), ProMeta 3, ESCI (Exploratory Software for Confidence Intervals; \url{https://thenewstatistics.com/itns/})
+  \end{itemize}
 }
 
 \small
@@ -917,7 +935,7 @@ CMA (Comprehensive Meta-Analysis; \url{https://meta-analysis.com/}), ProMeta 3, 
   \item ``Identifies where research exists and where gaps remain, providing a visual representation of research coverage rather than synthesizing findings.''
 \end{itemize}
 
-\begin{flushright} \scriptsize (Maynard, in press, Table 1) \end{flushright}
+\begin{flushright} \scriptsize (Maynard, 2025, Table 1) \end{flushright}
 }
 
 
@@ -932,7 +950,7 @@ CMA (Comprehensive Meta-Analysis; \url{https://meta-analysis.com/}), ProMeta 3, 
   \item Crocetti, E. (2016). Systematic reviews with meta-analysis: Why, when, and how? \textit{Emerging Adulthood, 4}(1), 3--18. \url{https://doi.org/10.1177/2167696815617076}
   \item Daniels, K. (2019). Guidance on conducting and reviewing systematic reviews (and meta-analyses) in work and organizational psychology. \textit{European Journal of Work and Organizational Psychology, 28}(1), 1--10. \url{https://doi.org/10.1080/1359432X.2018.1547708}
   \item Field, A. P., \& Gillett, R. (2010). How to do a meta‐analysis. \textit{British Journal of Mathematical and Statistical Psychology, 63}(3), 665--694. \url{https://doi.org/10.1348/000711010X502733}
-  \item Maynard, B. R. (in press). Research Synthesis Methods: A guide for conducting rigorous and relevant reviews. \textit{Research on Social Work Practice}. \url{https://doi.org/10.1177/10497315251334150}
+  \item Maynard, B. R. (in press). Research Synthesis Methods: A guide for conducting rigorous and relevant reviews. \textit{Research on Social Work Practice}, \textit{35}(6), 607-620. \url{https://doi.org/10.1177/10497315251334150}
   \item Morris, S. B. (2023). Meta-analysis in organizational research: A guide to methodological options. \textit{Annual Review of Organizational Psychology and Organizational Behavior, 10}, 225--259. \url{https://doi.org/10.1146/annurev-orgpsych-031921-021922}
   \item Siddaway, A. P., Wood, A. M., \& Hedges, L. V. (2019). How to do a systematic review: A best practice guide for conducting and reporting narrative reviews, meta-analyses, and meta-syntheses. \textit{Annual Review of Psychology, 70}, 747--770. \url{https://doi.org/10.1146/annurev-psych-010418-102803}
 \end{itemize} 
@@ -940,7 +958,7 @@ CMA (Comprehensive Meta-Analysis; \url{https://meta-analysis.com/}), ProMeta 3, 
 
 ## Books/Chapters
 
-\scriptsize
+\tiny
 
 \begin{itemize}
   \item Card, N. (2012). \textit{Applied meta-analysis for social science research}. Guilford.
@@ -977,6 +995,12 @@ CMA (Comprehensive Meta-Analysis; \url{https://meta-analysis.com/}), ProMeta 3, 
 \begin{itemize}
   \item Gambarota, F., \& Altoè, G. (2024). Understanding meta-analysis through data simulation with applications to power analysis. \textit{Advances in Methods and Practices in Psychological Science, 7}(1), 1--18. \url{https://doi.org/10.1177/25152459231209330}
 \end{itemize}
+
+\textbf{Multivariate meta-analysis and Imputation techniques}
+\begin{itemize}
+  \item Alfarone, I., \& Gondan, M. (2026). Change of \textit{d}-irection: Current limitations and future directions in psychological meta-analysis. \textit{Frontiers in Psychology, 17}, Article 1717798. \url{https://doi.org/10.3389/fpsyg.2026.1717798}
+\end{itemize}
+
 
 ## Journal
 
